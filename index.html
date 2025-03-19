@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Understanding AI Fundamentals - Slides</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .slide-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .slide {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .slide:hover {
+            transform: translateY(-5px);
+        }
+        .slide-header {
+            background-color: #1e88e5;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .slide-content {
+            padding: 25px;
+            line-height: 1.6;
+        }
+        .slide-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            margin: 15px 0;
+        }
+        .key-points {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .key-points h3 {
+            margin-top: 0;
+            color: #1565c0;
+        }
+        .key-points ul {
+            margin-bottom: 0;
+        }
+        .activity {
+            background-color: #e1f5fe;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 5px solid #03a9f4;
+        }
+        .quiz-container {
+            background-color: #e8eaf6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .quiz-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .quiz-options {
+            margin-left: 20px;
+        }
+        .quiz-option {
+            margin: 8px 0;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .quiz-option:hover {
+            background-color: #bbdefb;
+        }
+        .quiz-feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .correct {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+        }
+        .incorrect {
+            background-color: #ffcdd2;
+            color: #c62828;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .nav-button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #1565c0;
+        }
+        .nav-button:disabled {
+            background-color: #bbdefb;
+            cursor: not-allowed;
+        }
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .progress-bar {
+            height: 10px;
+            background-color: #1976d2;
+            border-radius: 4px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        .slide-number {
+            text-align: center;
+            color: #757575;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="slide-number" id="slide-number">Slide 1 of 10</div>
+        
+        <div class="slide" id="slide-1">
+            <div class="slide-header">Understanding AI Fundamentals</div>
+            <div class="slide-content">
+                <h2>Introduction to Artificial Intelligence for Primary Teachers</h2>
+                <img src="https://images.unsplash.com/photo-1677442135136-760c813a6a6b?q=80&w=1932&auto=format&fit=crop" alt="AI concept illustration" class="slide-image">
+                <p>Welcome to Module 1 of the AI Literacy Course for Primary School Teachers. This module introduces the fundamental concepts of artificial intelligence, providing you with a clear understanding of what AI is, how it works, and its relevance to primary education.</p>
+                <div class="key-points">
+                    <h3>In this module, you will learn:</h3>
+                    <ul>
+                        <li>What artificial intelligence is and isn't</li>
+                        <li>The basic principles of how AI systems work</li>
+                        <li>Common types of AI and their applications</li>
+                        <li>How to explain AI concepts in age-appropriate ways</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-2" style="display: none;">
+            <div class="slide-header">What is Artificial Intelligence?</div>
+            <div class="slide-content">
+                <h2>Defining AI for Educational Contexts</h2>
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop" alt="Robot and human interaction" class="slide-image">
+                <p>Artificial Intelligence (AI) refers to computer systems designed to perform tasks that typically require human intelligence. These include problem-solving, recognizing patterns, learning from experience, understanding language, and making decisions.</p>
+                <div class="key-points">
+                    <h3>Key Characteristics of AI:</h3>
+                    <ul>
+                        <li><strong>Learning:</strong> AI systems can improve their performance over time</li>
+                        <li><strong>Reasoning:</strong> They can process information and draw conclusions</li>
+                        <li><strong>Self-correction:</strong> They can adjust their approach based on feedback</li>
+                        <li><strong>Pattern recognition:</strong> They can identify patterns in data</li>
+                    </ul>
+                </div>
+                <p>For primary education, AI can be thought of as "smart computer helpers" that can learn and adapt to support teaching and learning in various ways.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-3" style="display: none;">
+            <div class="slide-header">AI vs. Traditional Computing</div>
+            <div class="slide-content">
+                <h2>Understanding the Difference</h2>
+                <div style="display: flex; justify-content: space-between; margin: 20px 0;">
+                    <div style="width: 48%; background-color: #e3f2fd; padding: 15px; border-radius: 5px;">
+                        <h3 style="color: #1565c0;">Traditional Computing</h3>
+                        <ul>
+                            <li>Follows explicit instructions (algorithms)</li>
+                            <li>Cannot improve without reprogramming</li>
+                            <li>Performs exactly as programmed</li>
+                            <li>Struggles with ambiguity</li>
+                        </ul>
+                    </div>
+                    <div style="width: 48%; background-color: #e1f5fe; padding: 15px; border-radius: 5px;">
+                        <h3 style="color: #0288d1;">Artificial Intelligence</h3>
+                        <ul>
+                            <li>Can learn from data and experience</li>
+                            <li>Improves performance over time</li>
+                            <li>Can handle unexpected inputs</li>
+                            <li>Can work with ambiguity and probability</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>This distinction is important for understanding how AI tools in education differ from traditional educational software. While traditional software follows fixed rules, AI systems can adapt to individual student needs and provide personalized support.</p>
+                <div class="activity">
+                    <h3>Reflection Activity:</h3>
+                    <p>Think about educational software you currently use. Which features seem to use traditional computing, and which might use AI? What differences do you notice in how they function?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-4" style="display: none;">
+            <div class="slide-header">How AI Systems Learn</div>
+            <div class="slide-content">
+                <h2>The Basics of Machine Learning</h2>
+                <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1974&auto=format&fit=crop" alt="Learning concept" class="slide-image">
+                <p>Most modern AI systems use a process called <strong>machine learning</strong>, where they learn from examples rather than being explicitly programmed with rules.</p>
+                <div class="key-points">
+                    <h3>The Machine Learning Process:</h3>
+                    <ol>
+                        <li><strong>Training:</strong> The AI is given many examples (data) to learn from</li>
+                        <li><strong>Pattern Recognition:</strong> It identifies patterns in the training data</li>
+                        <li><strong>Model Building:</strong> It creates a model based on these patterns</li>
+                        <li><strong>Prediction:</strong> It uses the model to make predictions or decisions about new data</li>
+                        <li><strong>Feedback:</strong> It receives feedback on its performance and adjusts accordingly</li>
+                    </ol>
+                </div>
+                <p>This is similar to how children learn - through examples, practice, and feedback - which makes it a relatable concept for primary education.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-5" style="display: none;">
+            <div class="slide-header">Types of AI Systems</div>
+            <div class="slide-content">
+                <h2>Common AI Approaches in Education</h2>
+                <div class="key-points">
+                    <h3>Major Types of AI Relevant to Primary Education:</h3>
+                    <ul>
+                        <li><strong>Natural Language Processing (NLP):</strong> Understands and generates human language (e.g., reading assistants, writing feedback tools)</li>
+                        <li><strong>Computer Vision:</strong> Interprets visual information (e.g., recognizing handwriting, analyzing drawings)</li>
+                        <li><strong>Recommendation Systems:</strong> Suggests content based on patterns (e.g., personalized reading recommendations)</li>
+                        <li><strong>Intelligent Tutoring Systems:</strong> Provides personalized instruction and feedback</li>
+                    </ul>
+                </div>
+                <img src="https://images.unsplash.com/photo-1581092921461-7d65ca45393a?q=80&w=2070&auto=format&fit=crop" alt="Different types of AI applications" class="slide-image">
+                <p>Each type of AI has specific applications in primary education, from supporting literacy development to providing personalized learning experiences.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-6" style="display: none;">
+            <div class="slide-header">Common Misconceptions About AI</div>
+            <div class="slide-content">
+                <h2>Separating Fact from Fiction</h2>
+                <div style="display: flex; flex-direction: column; gap: 15px; margin: 20px 0;">
+                    <div style="display: flex; align-items: center; background-color: #ffcdd2; padding: 15px; border-radius: 5px;">
+                        <div style="font-weight: bold; margin-right: 10px;">Myth:</div>
+                        <div>AI systems are conscious and can think like humans.</div>
+                    </div>
+                    <div style="display: flex; align-items: center; background-color: #c8e6c9; padding: 15px; border-radius: 5px;">
+                        <div style="font-weight: bold; margin-right: 10px;">Fact:</div>
+                        <div>AI systems process information and recognize patterns, but they don't have consciousness or understanding.</div>
+                    </div>
+                    <div style="display: flex; align-items: center; background-color: #ffcdd2; padding: 15px; border-radius: 5px;">
+                        <div style="font-weight: bold; margin-right: 10px;">Myth:</div>
+                        <div>AI will replace teachers in the classroom.</div>
+                    </div>
+                    <div style="display: flex; align-items: center; background-color: #c8e6c9; padding: 15px; border-radius: 5px;">
+                        <div style="font-weight: bold; margin-right: 10px;">Fact:</div>
+                        <div>AI is designed to support teachers, not replace them. The human elements of teaching - empathy, creativity, moral guidance - cannot be replicated by AI.</div>
+                    </div>
+                    <div style="display: flex; align-items: center; background-color: #ffcdd2; padding: 15px; border-radius: 5px;">
+                        <div style="font-weight: bold; margin-right: 10px;">Myth:</div>
+                        <div>AI is too complex for primary school teachers to understand or use.</div>
+                    </div>
+                    <div style="display: flex; align-items: center; background-color: #c8e6c9; padding: 15px; border-radius: 5px;">
+                        <div style="font-weight: bold; margin-right: 10px;">Fact:</div>
+                        <div>Many AI tools are designed to be user-friendly. Understanding the basic concepts is sufficient for effective classroom use.</div>
+                    </div>
+                </div>
+                <p>Addressing these misconceptions is important for developing a realistic understanding of AI's role in education.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-7" style="display: none;">
+            <div class="slide-header">Explaining AI to Primary Students</div>
+            <div class="slide-content">
+                <h2>Age-Appropriate Explanations</h2>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" alt="Teacher explaining to students" class="slide-image">
+                <div class="key-points">
+                    <h3>Simplified Explanations by Age Group:</h3>
+                    <ul>
+                        <li><strong>Ages 5-7:</strong> "AI is like a computer that can learn. It learns from examples, just like you learn from practice."</li>
+                        <li><strong>Ages 7-9:</strong> "AI systems are computer programs that can find patterns in information and make decisions based on what they've learned."</li>
+                        <li><strong>Ages 9-11:</strong> "AI is technology that can learn from data, recognize patterns, and make predictions or decisions without being explicitly programmed for every situation."</li>
+                    </ul>
+                </div>
+                <div class="activity">
+                    <h3>Teaching Activity:</h3>
+                    <p>Use the "Guess What I'm Thinking" game to explain AI learning. Choose a simple rule (e.g., "I'm thinking of animals with four legs"). Students guess examples, and you say yes or no. After several examples, they try to figure out your rule - demonstrating how AI learns from examples to identify patterns.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-8" style="display: none;">
+            <div class="slide-header">AI in Our Daily Lives</div>
+            <div class="slide-content">
+                <h2>Recognizing AI Around Us</h2>
+                <p>AI is already present in many aspects of our daily lives, often in ways we don't recognize. Helping students identify these examples makes the concept more concrete.</p>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
+                    <div style="background-color: #e3f2fd; padding: 15px; border-radius: 5px;">
+                        <h3 style="color: #1565c0;">Home</h3>
+                        <ul>
+                            <li>Smart speakers (Alexa, Google Home)</li>
+                            <li>Streaming recommendations (Netflix, YouTube)</li>
+                            <li>Smart home devices</li>
+                            <li>Photo organization in smartphones</li>
+                        </ul>
+                    </div>
+                    <div style="background-color: #e3f2fd; padding: 15px; border-radius: 5px;">
+                        <h3 style="color: #1565c0;">School</h3>
+                        <ul>
+                            <li>Adaptive learning programs</li>
+                            <li>Spelling and grammar checkers</li>
+                            <li>Search engines</li>
+                            <li>Translation tools</li>
+                        </ul>
+                    </div>
+                    <div style="background-color: #e3f2fd; padding: 15px; border-radius: 5px;">
+                        <h3 style="color: #1565c0;">Transportation</h3>
+                        <ul>
+                            <li>Navigation apps</li>
+                            <li>Traffic prediction</li>
+                            <li>Driver assistance features</li>
+                            <li>Ride-sharing apps</li>
+                        </ul>
+                    </div>
+                    <div style="background-color: #e3f2fd; padding: 15px; border-radius: 5px;">
+                        <h3 style="color: #1565c0;">Entertainment</h3>
+                        <ul>
+                            <li>Music recommendations</li>
+                            <li>Games with adaptive difficulty</li>
+                            <li>Content filtering</li>
+                            <li>Voice-controlled devices</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="activity">
+                    <h3>Classroom Activity:</h3>
+                    <p>Create an "AI Scavenger Hunt" where students identify AI applications in their daily lives and explain how they think these systems learn and adapt.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-9" style="display: none;">
+            <div class="slide-header">The Evolution of AI in Education</div>
+            <div class="slide-content">
+                <h2>From Simple Programs to Adaptive Systems</h2>
+                <div style="display: flex; flex-direction: column; gap: 15px; margin: 20px 0;">
+                    <div style="background-color: #e1f5fe; padding: 15px; border-radius: 5px; border-left: 5px solid #03a9f4;">
+                        <h3 style="margin-top: 0;">1980s-1990s: Early Computer-Assisted Instruction</h3>
+                        <p style="margin-bottom: 0;">Simple drill-and-practice programs with predetermined feedback and fixed learning paths.</p>
+                    </div>
+                    <div style="background-color: #e1f5fe; padding: 15px; border-radius: 5px; border-left: 5px solid #03a9f4;">
+                        <h3 style="margin-top: 0;">2000s: Adaptive Learning Systems</h3>
+                        <p style="margin-bottom: 0;">Programs that could adjust difficulty based on student performance, with limited personalization.</p>
+                    </div>
+                    <div style="background-color: #e1f5fe; padding: 15px; border-radius: 5px; border-left: 5px solid #03a9f4;">
+                        <h3 style="margin-top: 0;">2010s: Intelligent Tutoring Systems</h3>
+                        <p style="margin-bottom: 0;">More sophisticated systems that could track learning patterns and provide personalized guidance.</p>
+                    </div>
+                    <div style="background-color: #e1f5fe; padding: 15px; border-radius: 5px; border-left: 5px solid #03a9f4;">
+                        <h3 style="margin-top: 0;">2020s: AI-Enhanced Learning Ecosystems</h3>
+                        <p style="margin-bottom: 0;">Comprehensive systems that can generate content, provide feedback, adapt to learning styles, and support teachers with insights and recommendations.</p>
+                    </div>
+                </div>
+                <p>Understanding this evolution helps contextualize current AI tools and anticipate future developments in educational technology.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide-10" style="display: none;">
+            <div class="slide-header">Module 1 Review and Knowledge Check</div>
+            <div class="slide-content">
+                <h2>Key Takeaways</h2>
+                <div class="key-points">
+                    <h3>In this module, we've covered:</h3>
+                    <ul>
+                        <li>The definition and key characteristics of artificial intelligence</li>
+                        <li>How AI differs from traditional computing</li>
+                        <li>The basics of how AI systems learn through machine learning</li>
+                        <li>Common types of AI relevant to primary education</li>
+                        <li>Misconceptions about AI and their corrections</li>
+                        <li>Age-appropriate ways to explain AI to primary students</li>
+                        <li>Examples of AI in everyday life</li>
+                        <li>The evolution of AI in educational contexts</li>
+                    </ul>
+                </div>
+                
+                <div class="quiz-container">
+                    <h3>Knowledge Check</h3>
+                    <div class="quiz-question">1. Which of the following best describes how AI systems learn?</div>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, true)">A) They identify patterns in data and build models to make predictions</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">B) They follow explicit step-by-step instructions programmed by humans</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">C) They develop consciousness and think like humans</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">D) They memorize all possible scenarios and their solutions</div>
+                    </div>
+                    <div class="quiz-feedback" id="feedback-1"></div>
+                    
+                    <div class="quiz-question">2. Which of these is NOT a common type of AI used in education?</div>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">A) Natural Language Processing</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">B) Computer Vision</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true)">C) Conscious Reasoning Systems</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">D) Recommendation Systems</div>
+                    </div>
+                    <div class="quiz-feedback" id="feedback-2"></div>
+                    
+                    <div class="quiz-question">3. What is the most appropriate way to explain AI to a 6-year-old student?</div>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">A) "AI is a complex computational system that utilizes neural networks to process data."</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true)">B) "AI is like a computer that can learn from examples, just like you learn from practice."</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">C) "AI is a robot that thinks and feels just like humans do."</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false)">D) "AI is too complicated for you to understand right now."</div>
+                    </div>
+                    <div class="quiz-feedback" id="feedback-3"></div>
+                </div>
+                
+                <div class="activity">
+                    <h3>Next Steps:</h3>
+                    <p>In Module 2, we'll explore specific applications of AI in primary education, focusing on how these tools can enhance teaching and learning in your classroom.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-button" id="prev-button" disabled>Previous</button>
+            <button class="nav-button" id="next-button">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 10;
+        
+        function updateSlideVisibility() {
+            // Hide all slides
+            for (let i = 1; i <= totalSlides; i++) {
+                document.getElementById(`slide-${i}`).style.display = 'none';
+            }
+            // Show current slide
+            document.getElementById(`slide-${currentSlide}`).style.display = 'block';
+            
+            // Update navigation buttons
+            document.getElementById('prev-button').disabled = (currentSlide === 1);
+            document.getElementById('next-button').disabled = (currentSlide === totalSlides);
+            
+            // Update slide number
+            document.getElementById('slide-number').textContent = `Slide ${currentSlide} of ${totalSlides}`;
+            
+            // Update progress bar
+            const progressPercentage = ((currentSlide - 1) / (totalSlides - 1)) * 100;
+            document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
+        }
+        
+        document.getElementById('prev-button').addEventListener('click', function() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlideVisibility();
+            }
+        });
+        
+        document.getElementById('next-button').addEventListener('click', function() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlideVisibility();
+            }
+        });
+        
+        function checkAnswer(element, isCorrect) {
+            // Find the parent quiz container
+            const quizContainer = element.closest('.quiz-options');
+            const feedbackElement = quizContainer.nextElementSibling;
+            
+            // Reset all options in this question
+            const options = quizContainer.querySelectorAll('.quiz-option');
+            options.forEach(option => {
+                option.style.backgroundColor = '';
+            });
+            
+            // Highlight selected option
+            if (isCorrect) {
+                element.style.backgroundColor = '#c8e6c9';
+                feedbackElement.textContent = 'Correct! Well done.';
+                feedbackElement.className = 'quiz-feedback correct';
+            } else {
+                element.style.backgroundColor = '#ffcdd2';
+                feedbackElement.textContent = 'Incorrect. Try again.';
+                feedbackElement.className = 'quiz-feedback incorrect';
+            }
+            
+            // Show feedback
+            feedbackElement.style.display = 'block';
+        }
+        
+        // Initialize the first slide
+        updateSlideVisibility();
+    </script>
+</body>
+</html>
